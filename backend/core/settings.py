@@ -138,7 +138,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
-    # "https://animated-happiness-67699xv6vwpf5xjx-8000.app.github.dev"
-    # "http://localhost:5173",
-    # "https://animated-happiness-67699xv6vwpf5xjx-8000.app.github.dev"
+    
 ]
