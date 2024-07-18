@@ -4,11 +4,14 @@ import SavingsRoundedIcon from '@mui/icons-material/SavingsRounded';
 import LoginDialog from '../LoginDialog';
 import SignUpDialog from '../SignUpDialog';
 import SideBar from '../SideBar';
+import DashBoard from '../../Pages/DashBoard';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [loginDialogOpen, setLoginDialogOpen] = useState(false);
     const [signUpDialogOpen, setSignUpDialogOpen] = useState(false);
     const [value, setValue] = useState(0); // State for managing the active tab
+
 
     const handleLoginClick = () => {
         setLoginDialogOpen(true);
@@ -22,6 +25,16 @@ const NavBar = () => {
         setLoginDialogOpen(false);
         setSignUpDialogOpen(false);
     };
+    // const location = useLocation(); // Get current location from React Router
+    const navigate = useNavigate(); // Get navigate function from React Router
+
+    // const clickNav = () => {
+    //     navigate('/dashboard');
+    // }
+
+    const clickLogo = () => {
+        navigate('/');
+    }
 
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('md'));
@@ -35,7 +48,7 @@ const NavBar = () => {
             <AppBar position="static" sx={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-                        <SavingsRoundedIcon />
+                        <SavingsRoundedIcon onClick={clickLogo} />
                     </IconButton>
                     {
                         isMatch ? (
@@ -48,9 +61,10 @@ const NavBar = () => {
                         ) : (
                             <>
                                 <Tabs value={value} onChange={handleChange} textColor='inherit' indicatorColor='secondary'>
-                                    <Tab label='About' />
-                                    <Tab label='Chama' />
-                                    <Tab label='Services' />
+                                    <Tab label='About' component={Link} to='/' />
+                                    <Tab label='Chama' component={Link} to='/' />
+                                    <Tab label='Services' component={Link} to='/' />
+                                    <Tab label='DashBoard' component={Link} to='/dashboard' />
                                 </Tabs>
                                 <Button color='inherit' sx={{ flexWrap: 'nowrap' }} onClick={handleLoginClick}>
                                     Login

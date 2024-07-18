@@ -21,7 +21,7 @@ const Home = () => {
                         sx={{
                             textAlign: 'center',
                             color: '#fff',
-                            padding: '20px',
+                            padding: '30px',
                             backgroundColor: 'rgba(0, 0, 0, 0.5)',
                             borderRadius: '10px',
                         }}

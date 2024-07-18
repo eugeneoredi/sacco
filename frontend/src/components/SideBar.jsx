@@ -33,6 +33,9 @@ const SideBar = ({ onLoginClick, onSignUpClick }) => {
                     <ListItemButton onClick={handleDrawerToggle}>
                         <ListItemText primary="Services" />
                     </ListItemButton>
+                    <ListItemButton onClick={handleDrawerToggle}>
+                        <ListItemText primary="DashBoard" />
+                    </ListItemButton>
                     <ListItemButton onClick={() => { handleDrawerToggle(); onLoginClick(); }}>
                         <ListItemText primary="Login" />
                     </ListItemButton>
