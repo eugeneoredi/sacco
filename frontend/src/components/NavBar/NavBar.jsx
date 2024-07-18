@@ -47,8 +47,8 @@ const NavBar = () => {
         <>
             <AppBar position="static" sx={{ backgroundColor: 'black' }}>
                 <Toolbar>
-                    <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-                        <SavingsRoundedIcon onClick={clickLogo} />
+                    <IconButton onClick={clickLogo} size='large' edge='start' color='inherit' aria-label='logo'>
+                        <SavingsRoundedIcon />
                     </IconButton>
                     {
                         isMatch ? (
