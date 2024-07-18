@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getMembers } from "../../services/api";
-
+import './MembersList.css'
 
 
 const MembersList = () => {
@@ -19,14 +19,14 @@ const MembersList = () => {
     }, []);
 
     return (
-        <>
+        <div className="container">
             <h2>Members</h2>
             <ul>
                 {members.map((member) => (
                     <li key={members.id}>{member.first_name} {member.last_name}</li>
                 ))}
             </ul>
-        </>
+        </div>
     )
 }
 

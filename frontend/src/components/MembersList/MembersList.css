@@ -1,0 +1,19 @@
+.container {
+    padding: 1px 4px;
+    background-color: cadetblue;
+    color:  #fff;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 2px;
+}
+
+.container h2 {
+    margin: 0;
+}
+
+.container ul {
+    list-style-type: none;
+}

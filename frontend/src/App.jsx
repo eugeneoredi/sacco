@@ -2,9 +2,9 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import NavBar from './components/NavBar/NavBar';
-import MembersList from './components/MembersList/MemberList';
-
+import NavBar from './components/NavBar/NavBar';
+import Home from './Pages/Home';
+// import MembersList from './components/MembersList/MemberList';
 function App() {
 
   // useEffect(() => {
@@ -18,10 +18,17 @@ function App() {
   //     })
   // }, []);
   return (
-    <>
-      <h1>SACCO</h1>
-      <MembersList/>
-    </>
+    <Router>
+      <div className='App'>
+        <NavBar />
+        {/* <MembersList /> */}
+        <div className='content'>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+          </Routes>
+        </div>
+      </div>
+    </Router>
 
   );
 }
