@@ -11,7 +11,18 @@ const SideBar = ({ onLoginClick, onSignUpClick }) => {
 
     return (
         <>
-            <Drawer open={openDrawer} onClose={handleDrawerToggle}>
+            <Drawer
+                open={openDrawer}
+                onClose={handleDrawerToggle}
+                sx={{
+                    width: 240, // Adjust the width as needed
+                    flexShrink: 0,
+                    '& .MuiDrawer-paper': {
+                        width: 240, // Adjust the width as needed
+                        boxSizing: 'border-box',
+                    },
+                }}
+            >
                 <List>
                     <ListItemButton onClick={handleDrawerToggle}>
                         <ListItemText primary="About" />
